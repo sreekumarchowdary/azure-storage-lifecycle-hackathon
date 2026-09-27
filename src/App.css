@@ -1,0 +1,533 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #152238;
+}
+
+.app {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 32px;
+}
+
+
+/* HEADER */
+
+.topbar {
+  background: linear-gradient(
+    135deg,
+    #0b84d8,
+    #0067b8
+  );
+
+  color: white;
+
+  padding: 30px 35px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  box-shadow: 0 10px 25px
+    rgba(0, 90, 160, 0.15);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.topbar p {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 17px;
+}
+
+.connection {
+  padding: 13px 22px;
+
+  border-radius: 30px;
+
+  font-weight: bold;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.connected {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.18
+  );
+}
+
+.disconnected {
+  background: rgba(
+    255,
+    60,
+    60,
+    0.3
+  );
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: white;
+  border-radius: 50%;
+}
+
+
+/* SUMMARY CARDS */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.card {
+  background: white;
+
+  padding: 28px;
+
+  border-radius: 16px;
+
+  border-left: 5px solid;
+
+  box-shadow:
+    0 5px 16px
+    rgba(35, 60, 90, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #51627a;
+}
+
+.number {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111;
+}
+
+.card p {
+  color: #91a0b8;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.blue {
+  border-color: #168fe5;
+}
+
+.red {
+  border-color: #ff4c4c;
+}
+
+.lightblue {
+  border-color: #3d8bfd;
+}
+
+.purple {
+  border-color: #8854ff;
+}
+
+.green {
+  border-color: #20c76f;
+}
+
+
+/* MAIN PANEL */
+
+.panel {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 28px;
+
+  margin-bottom: 26px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(35, 60, 90, 0.08);
+}
+
+.panel h2 {
+  margin-top: 0;
+
+  font-size: 27px;
+
+  color: #152238;
+}
+
+.section-description {
+  color: #65758c;
+
+  line-height: 1.6;
+}
+
+
+/* LIFECYCLE */
+
+.recommendation-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin: 25px 0;
+}
+
+.recommendation-box {
+  background: #f7f9fc;
+
+  padding: 20px;
+
+  border-radius: 12px;
+}
+
+.recommendation-box span {
+  color: #687890;
+
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.recommendation-box strong {
+  font-size: 23px;
+}
+
+.hot-text {
+  color: #ff3d3d !important;
+}
+
+.cool-text {
+  color: #2878ff !important;
+}
+
+.archive-text {
+  color: #8251ff !important;
+  font-weight: 700;
+}
+
+
+/* BUTTONS */
+
+.primary-button {
+  background: #0783db;
+
+  border: none;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  padding: 14px 24px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.primary-button:hover {
+  background: #006bb8;
+
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  background: #eef6ff;
+
+  color: #0078d4;
+
+  border: 1px solid #a9d5f5;
+
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* MESSAGES */
+
+.success-message {
+  margin-top: 18px;
+
+  background: #eafaf1;
+
+  border: 1px solid #68df9b;
+
+  color: #087536;
+
+  padding: 16px;
+
+  border-radius: 9px;
+
+  font-weight: 700;
+}
+
+.error-message {
+  margin-top: 15px;
+
+  background: #fff0f1;
+
+  border: 1px solid #ff9fa9;
+
+  color: #b21f2d;
+
+  padding: 15px;
+
+  border-radius: 9px;
+}
+
+.loading-box,
+.empty-message {
+  background: #f7f9fc;
+
+  padding: 18px;
+
+  border-radius: 10px;
+
+  color: #64748b;
+}
+
+
+/* AZURE BLOB */
+
+.section-heading-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.blob-card {
+  margin-top: 22px;
+
+  background: #f7f9fc;
+
+  border: 1px solid #dde6ef;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.blob-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px 20px;
+
+  border-bottom:
+    1px solid #e5eaf0;
+}
+
+.blob-row:last-child {
+  border-bottom: none;
+}
+
+.blob-row span {
+  color: #607089;
+}
+
+.blob-row strong {
+  text-align: right;
+}
+
+.connected-text {
+  color: #17a958;
+
+  font-weight: 700;
+}
+
+
+/* REHYDRATION */
+
+.retrieval-information {
+  margin-top: 20px;
+
+  font-size: 17px;
+}
+
+.priority-title {
+  margin-top: 25px;
+
+  margin-bottom: 15px;
+}
+
+.radio-group {
+  display: flex;
+
+  gap: 35px;
+
+  margin-bottom: 20px;
+}
+
+.radio-group label {
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.radio-group input {
+  margin-right: 7px;
+}
+
+.selected-priority {
+  margin: 20px 0;
+}
+
+
+/* ARCHITECTURE */
+
+.architecture {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  padding-top: 20px;
+}
+
+.architecture-box {
+  padding: 17px 22px;
+
+  background: #f0f5fa;
+
+  border: 1px solid #d8e1eb;
+
+  border-radius: 10px;
+
+  font-weight: 700;
+}
+
+.azure-box {
+  background: #e8f5ff;
+
+  color: #006fbe;
+
+  border-color: #8bcbf6;
+}
+
+.arrow {
+  font-size: 24px;
+
+  color: #6e7c90;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  color: #8492a6;
+
+  padding: 15px 0 30px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+  .app {
+    padding: 18px;
+  }
+
+  .topbar {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-group {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .section-heading-row {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .blob-row {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+
+  .blob-row strong {
+    text-align: left;
+  }
+
+  .architecture {
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(0deg);
+  }
+}
